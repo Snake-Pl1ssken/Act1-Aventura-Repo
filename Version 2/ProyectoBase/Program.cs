@@ -225,14 +225,16 @@ namespace AdventureEngine
 
                 nombre = ficheros[i].Substring(posicion + 1);
 
-                CharacterTextures[nombre] = new Texture(ficheros[i]);
+                string[] Character = nombre.Split('.');
+
+                CharacterTextures[Character[0]] = new Texture(ficheros[i]);
 
                 //CharacterTextures.Add(nombre, new Texture(ficheros[i])); alternativa para añadir cosas al diccionario
-                characterSprite = new Sprite();
-                characterSprite.Texture = CharacterTextures[nombre];
-                characterSprite.Origin = new Vector2f(CharacterTextures[nombre].Size.X / 2, CharacterTextures[nombre].Size.Y);
-                characterSprite.Position = new Vector2f(characterX, characterY);
-                Console.WriteLine("    " + nombre); //TEST
+                //characterSprite = new Sprite();
+                //characterSprite.Texture = CharacterTextures[nombre];
+                //characterSprite.Origin = new Vector2f(CharacterTextures[nombre].Size.X / 2, CharacterTextures[nombre].Size.Y);
+                //characterSprite.Position = new Vector2f(characterX, characterY);
+                //Console.WriteLine("    " + nombre); //TEST
             }
 
 
@@ -257,10 +259,11 @@ namespace AdventureEngine
             //doroteaTexture = new Texture("characters\\dorotea.png");
             //nicolasTexture = new Texture("characters\\nicolas.png");
 
-            //characterSprite = new Sprite();
-            //characterSprite.Texture = CharacterTextures[];
-            //characterSprite.Origin = new Vector2f(CharacterTextures["Characters"].Size.X / 2, CharacterTextures["Characters"].Size.Y);
-            //characterSprite.Position = new Vector2f(characterX, characterY);
+            Texture CHt = CharacterTextures.First().Value;
+            characterSprite = new Sprite();
+            characterSprite.Texture = CHt;
+            characterSprite.Origin = new Vector2f(CHt.Size.X / 2, CHt.Size.Y);
+            characterSprite.Position = new Vector2f(characterX, characterY);
 
 
             // Background initialization
@@ -371,11 +374,8 @@ namespace AdventureEngine
                     }
                     else if (command.id == CommandId.showDialog)
                     {
-                        if(command.param1 == "basilio") { characterSprite.Texture = basilioTexture; }
-                        else if (command.param1 == "carmelo") { characterSprite.Texture = carmeloTexture; }
-                        else if (command.param1 == "dorotea") { characterSprite.Texture = doroteaTexture; }
-                        else if (command.param1 == "nicolas") { characterSprite.Texture = nicolasTexture; }
-
+                        characterSprite.Texture = CharacterTextures[command.param1]; 
+                        
                         dialogNameText = new Text(command.param1, dialogFont);
                         dialogNameText.Position = new Vector2f(100, 540);
 
