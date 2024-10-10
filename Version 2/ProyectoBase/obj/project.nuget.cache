@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EEgjesQ5A1yyoPGqJToV2B8P2a/I9SEpGJHseQDYXPw61Ig9XRyosbPD4hnUsgoqJd/3thJlCsuyw59GbzEtrw==",
+  "dgSpecHash": "FrSOhG9M3KTSU5nquwVr6zoKku5KGWEgFi01LlB7aGXgak3/MGhWswip4yckq/yhyyVOE3NM665CyBBPit2TAg==",
   "success": true,
-  "projectFilePath": "E:\\2do año\\Acceso Datos\\UF1\\ACT1\\ProyectoBase\\AdventureEngine.csproj",
+  "projectFilePath": "D:\\Jorge Luis Garcia Orbegoso\\Acceso Datos\\Repo_Act1\\Version 2\\ProyectoBase\\AdventureEngine.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alumno\\.nuget\\packages\\csfml\\2.6.1\\csfml.2.6.1.nupkg.sha512",
     "C:\\Users\\Alumno\\.nuget\\packages\\sfml.audio\\2.6.0\\sfml.audio.2.6.0.nupkg.sha512",

@@ -1075,24 +1075,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alumno\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Alumno\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\2do año\\Acceso Datos\\UF1\\ACT1\\ProyectoBase\\AdventureEngine.csproj",
+      "projectUniqueName": "D:\\Jorge Luis Garcia Orbegoso\\Acceso Datos\\Repo_Act1\\Version 2\\ProyectoBase\\AdventureEngine.csproj",
       "projectName": "AdventureEngine",
-      "projectPath": "E:\\2do año\\Acceso Datos\\UF1\\ACT1\\ProyectoBase\\AdventureEngine.csproj",
+      "projectPath": "D:\\Jorge Luis Garcia Orbegoso\\Acceso Datos\\Repo_Act1\\Version 2\\ProyectoBase\\AdventureEngine.csproj",
       "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
-      "outputPath": "E:\\2do año\\Acceso Datos\\UF1\\ACT1\\ProyectoBase\\obj\\",
+      "outputPath": "D:\\Jorge Luis Garcia Orbegoso\\Acceso Datos\\Repo_Act1\\Version 2\\ProyectoBase\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

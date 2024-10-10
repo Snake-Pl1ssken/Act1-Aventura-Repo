@@ -97,27 +97,27 @@ namespace AdventureEngine
         
         
         static Command[] commands =
-                    {
-                        new Command() { id = CommandId.setBackground, param1 = "castillo" },
-                        new Command() { id = CommandId.playMusic, param1 = "normal" },
-                        new Command() { id = CommandId.wait, param1 = "1.0" },
-                        new Command() { id = CommandId.showDialog, param1 = "nicolas", param2 = "Buenos días" },
-                        new Command() { id = CommandId.showDialog, param1 = "nicolas", param2 = "Soy Nicolás, el mayordomo de la señora Dorotea" },
-                        new Command() { id = CommandId.showDialog, param1 = "nicolas", param2 = "Permítame llevar su equipaje" },
-                        new Command() { id = CommandId.wait, param1 = "1" },
-                        new Command() { id = CommandId.setBackground, param1 = "vestibulo" },
-                        new Command() { id = CommandId.wait, param1 = "1" },
-                        new Command() { id = CommandId.showDialog, param1 = "nicolas", param2 = "Éste es el vestíbulo del castillo" },
-                        new Command() { id = CommandId.showDialog, param1 = "nicolas", param2 = "Espere aquí. La señora Dorotea vendrá en cualquier momento" },
-                        new Command() { id = CommandId.showDialog, param1 = "nicolas", param2 = "Si me disculpa, llevaré su equipaje a su dormitorio" },
-                        new Command() { id = CommandId.wait, param1 = "3" },
-                        new Command() { id = CommandId.playMusic, param1 = "tensa" },
-                        new Command() { id = CommandId.showDialog, param1 = "basilio", param2 = "¿Quién es usted?" },
-                        new Command() { id = CommandId.showDialog, param1 = "basilio", param2 = "Bueno, en realidad me da igual" },
-                        new Command() { id = CommandId.showDialog, param1 = "basilio", param2 = "Vaya a buscar a ese inútil de Nicolás porque tenemos un problema" },
-                        new Command() { id = CommandId.showDialog, param1 = "basilio", param2 = "LA SEÑORA DOROTEA HA DESAPARECIDO" }
+        {
+            new Command() { id = CommandId.setBackground, param1 = "castillo" },
+            new Command() { id = CommandId.playMusic, param1 = "normal" },
+            new Command() { id = CommandId.wait, param1 = "1.0" },
+            new Command() { id = CommandId.showDialog, param1 = "nicolas", param2 = "Buenos días" },
+            new Command() { id = CommandId.showDialog, param1 = "nicolas", param2 = "Soy Nicolás, el mayordomo de la señora Dorotea" },
+            new Command() { id = CommandId.showDialog, param1 = "nicolas", param2 = "Permítame llevar su equipaje" },
+            new Command() { id = CommandId.wait, param1 = "1" },
+            new Command() { id = CommandId.setBackground, param1 = "vestibulo" },
+            new Command() { id = CommandId.wait, param1 = "1" },
+            new Command() { id = CommandId.showDialog, param1 = "nicolas", param2 = "Éste es el vestíbulo del castillo" },
+            new Command() { id = CommandId.showDialog, param1 = "nicolas", param2 = "Espere aquí. La señora Dorotea vendrá en cualquier momento" },
+            new Command() { id = CommandId.showDialog, param1 = "nicolas", param2 = "Si me disculpa, llevaré su equipaje a su dormitorio" },
+            new Command() { id = CommandId.wait, param1 = "3" },
+            new Command() { id = CommandId.playMusic, param1 = "tensa" },
+            new Command() { id = CommandId.showDialog, param1 = "basilio", param2 = "¿Quién es usted?" },
+            new Command() { id = CommandId.showDialog, param1 = "basilio", param2 = "Bueno, en realidad me da igual" },
+            new Command() { id = CommandId.showDialog, param1 = "basilio", param2 = "Vaya a buscar a ese inútil de Nicolás porque tenemos un problema" },
+            new Command() { id = CommandId.showDialog, param1 = "basilio", param2 = "LA SEÑORA DOROTEA HA DESAPARECIDO" }
 
-                    };
+        };
 
         static void Main()
         {
@@ -182,6 +182,66 @@ namespace AdventureEngine
                 }
             }
 
+
+
+            //*********************************************************************************************************************************************************************
+            //DICCIONARIO INICIO
+
+            Dictionary<string, Texture> CharacterTextures = new Dictionary<string, Texture>();
+
+            Dictionary<string, Texture> BackgroundTextures = new Dictionary<string, Texture>();
+
+            //CharacterTextures["Characters"] = new Texture("characters\\basilio.png");
+            //CharacterTextures["Background"] = new Texture("characters\\carmelo.png");  REALMENTE LA GRACIA ES QUE CON EL NOMBRE DEL ARCHIVO SE CREE EL DICCIONARIO
+            //CharacterTextures["Musics"] = new Texture("characters\\dorotea.png");
+
+            //DICCIONARIO FIN
+            //*********************************************************************************************************************************************************************
+
+
+            //*********************************************************************************************************************************************************************
+            //ENTRADA RUTAS
+
+            string rutaOriginal, Characters, Backgrounds, Musics;
+
+            rutaOriginal = Directory.GetCurrentDirectory();
+
+            Characters = Directory.GetCurrentDirectory() + "\\characters";
+
+            Backgrounds = Directory.GetCurrentDirectory() + "\\backgrounds";
+
+            Musics = Directory.GetCurrentDirectory() + "\\musics";
+
+            string[] ficheros;
+
+            ficheros = Directory.GetFiles(Characters);
+
+            for (int i = 0; i < ficheros.Length; i++)
+            {
+                int posicion;
+                string nombre;
+
+                posicion = ficheros[i].LastIndexOf('\\');
+
+                nombre = ficheros[i].Substring(posicion + 1);
+
+                CharacterTextures[nombre] = new Texture(ficheros[i]);
+
+                //CharacterTextures.Add(nombre, new Texture(ficheros[i])); alternativa para añadir cosas al diccionario
+                characterSprite = new Sprite();
+                characterSprite.Texture = CharacterTextures[nombre];
+                characterSprite.Origin = new Vector2f(CharacterTextures[nombre].Size.X / 2, CharacterTextures[nombre].Size.Y);
+                characterSprite.Position = new Vector2f(characterX, characterY);
+                Console.WriteLine("    " + nombre); //TEST
+            }
+
+
+            //SALLIDA RUTAS
+            //*********************************************************************************************************************************************************************
+
+
+
+
             // Window initialization
 
             var mode = new VideoMode((uint)screenWidth, (uint)screenHeight);
@@ -191,16 +251,16 @@ namespace AdventureEngine
 
 
             // Characters initialization
+            // a dicionario
+            //basilioTexture = new Texture("characters\\basilio.png");
+            //carmeloTexture = new Texture("characters\\carmelo.png");
+            //doroteaTexture = new Texture("characters\\dorotea.png");
+            //nicolasTexture = new Texture("characters\\nicolas.png");
 
-            basilioTexture = new Texture("characters\\basilio.png");
-            carmeloTexture = new Texture("characters\\carmelo.png");
-            doroteaTexture = new Texture("characters\\dorotea.png");
-            nicolasTexture = new Texture("characters\\nicolas.png");
-
-            characterSprite = new Sprite();
-            characterSprite.Texture = basilioTexture;
-            characterSprite.Origin = new Vector2f(basilioTexture.Size.X / 2, basilioTexture.Size.Y);
-            characterSprite.Position = new Vector2f(characterX, characterY);
+            //characterSprite = new Sprite();
+            //characterSprite.Texture = CharacterTextures[];
+            //characterSprite.Origin = new Vector2f(CharacterTextures["Characters"].Size.X / 2, CharacterTextures["Characters"].Size.Y);
+            //characterSprite.Position = new Vector2f(characterX, characterY);
 
 
             // Background initialization
