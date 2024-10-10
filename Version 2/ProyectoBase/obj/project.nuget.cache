@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "EEgjesQ5A1yyoPGqJToV2B8P2a/I9SEpGJHseQDYXPw61Ig9XRyosbPD4hnUsgoqJd/3thJlCsuyw59GbzEtrw==",
+  "success": true,
+  "projectFilePath": "E:\\2do año\\Acceso Datos\\UF1\\ACT1\\ProyectoBase\\AdventureEngine.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alumno\\.nuget\\packages\\csfml\\2.6.1\\csfml.2.6.1.nupkg.sha512",
+    "C:\\Users\\Alumno\\.nuget\\packages\\sfml.audio\\2.6.0\\sfml.audio.2.6.0.nupkg.sha512",
+    "C:\\Users\\Alumno\\.nuget\\packages\\sfml.graphics\\2.6.0\\sfml.graphics.2.6.0.nupkg.sha512",
+    "C:\\Users\\Alumno\\.nuget\\packages\\sfml.net\\2.6.0\\sfml.net.2.6.0.nupkg.sha512",
+    "C:\\Users\\Alumno\\.nuget\\packages\\sfml.system\\2.6.0\\sfml.system.2.6.0.nupkg.sha512",
+    "C:\\Users\\Alumno\\.nuget\\packages\\sfml.window\\2.6.0\\sfml.window.2.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}
