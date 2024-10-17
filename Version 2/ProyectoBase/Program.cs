@@ -398,7 +398,13 @@ namespace AdventureEngine
                         //else if (command.param1 == "animada") { animadaMusic.Loop = true; animadaMusic.Play(); }
                         //else if (command.param1 == "tensa") { tensaMusic.Loop = true; tensaMusic.Play(); }
 
-                        MusicAudio.Music = MusicAudio[command.param1];
+                        foreach(KeyValuePair<string, Music> ControlMusic in MusicAudio)
+                        {
+                            ControlMusic.Value.Stop();
+                        }
+
+                        MusicAudio[command.param1].Loop = true;
+                        MusicAudio[command.param1].Play();
                         commandIndex++;
                     }
                     else if(command.id == CommandId.stopMusic)
