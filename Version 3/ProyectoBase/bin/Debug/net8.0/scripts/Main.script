@@ -1,0 +1,4 @@
+setBackground|castillo
+playMusic|normal
+wait|1.0
+showDialog|nicolas|Buenos días
