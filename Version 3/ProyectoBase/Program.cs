@@ -17,7 +17,7 @@ namespace AdventureEngine
 
     internal struct Command
     {
-        public string id;
+        public CommandId id;
         public string param1;
         public string param2;
         public string param3;
@@ -195,9 +195,7 @@ namespace AdventureEngine
 
             Dictionary<string, Texture> BackgroundTextures = new Dictionary<string, Texture>();
 
-            //CharacterTextures["Characters"] = new Texture("characters\\basilio.png");
-            //CharacterTextures["Background"] = new Texture("characters\\carmelo.png");  REALMENTE LA GRACIA ES QUE CON EL NOMBRE DEL ARCHIVO SE CREE EL DICCIONARIO
-            //CharacterTextures["Musics"] = new Texture("characters\\dorotea.png");
+            Dictionary<string, Music> MusicAudio = new Dictionary<string, Music>();
 
             //DICCIONARIO FIN
             //*********************************************************************************************************************************************************************
@@ -217,8 +215,12 @@ namespace AdventureEngine
             Musics = Directory.GetCurrentDirectory() + "\\musics";
 
             string[] ficheros;
+            string[] ficherosBG;
+            string[] ficherosMS;
 
             ficheros = Directory.GetFiles(Characters);
+            ficherosBG = Directory.GetFiles(Backgrounds);
+            ficherosMS = Directory.GetFiles(Musics);
 
             for (int i = 0; i < ficheros.Length; i++)
             {
@@ -233,12 +235,33 @@ namespace AdventureEngine
 
                 CharacterTextures[Character[0]] = new Texture(ficheros[i]);
 
-                //CharacterTextures.Add(nombre, new Texture(ficheros[i])); alternativa para añadir cosas al diccionario
-                //characterSprite = new Sprite();
-                //characterSprite.Texture = CharacterTextures[nombre];
-                //characterSprite.Origin = new Vector2f(CharacterTextures[nombre].Size.X / 2, CharacterTextures[nombre].Size.Y);
-                //characterSprite.Position = new Vector2f(characterX, characterY);
-                //Console.WriteLine("    " + nombre); //TEST
+            }
+            for (int i = 0; i < ficherosBG.Length; i++)
+            {
+                int posicion;
+                string nombre;
+
+                posicion = ficherosBG[i].LastIndexOf('\\');
+
+                nombre = ficherosBG[i].Substring(posicion + 1);
+
+                string[] Background = nombre.Split('.');
+
+                BackgroundTextures[Background[0]] = new Texture(ficherosBG[i]);
+            }
+
+            for (int i = 0; i < ficherosMS.Length; i++)
+            {
+                int posicion;
+                string nombre;
+
+                posicion = ficherosMS[i].LastIndexOf('\\');
+
+                nombre = ficherosMS[i].Substring(posicion + 1);
+
+                string[] Music = nombre.Split('.');
+
+                MusicAudio[Music[0]] = new Music(ficherosMS[i]);
             }
 
 
@@ -255,39 +278,17 @@ namespace AdventureEngine
             window.KeyPressed += OnKeyPressed;
             window.MouseButtonPressed += OnMousePressed;
 
-
-            // Characters initialization
-            // a dicionario
-            //basilioTexture = new Texture("characters\\basilio.png");
-            //carmeloTexture = new Texture("characters\\carmelo.png");
-            //doroteaTexture = new Texture("characters\\dorotea.png");
-            //nicolasTexture = new Texture("characters\\nicolas.png");
-
             Texture CHt = CharacterTextures.First().Value;
             characterSprite = new Sprite();
             characterSprite.Texture = CHt;
             characterSprite.Origin = new Vector2f(CHt.Size.X / 2, CHt.Size.Y);
             characterSprite.Position = new Vector2f(characterX, characterY);
 
-
-            // Background initialization
-
-            armeriaTexture = new Texture("backgrounds\\armeria.png");
-            castilloTexture = new Texture("backgrounds\\castillo.png");
-            comedorTexture = new Texture("backgrounds\\comedor.png");
-            dormitorioTexture = new Texture("backgrounds\\dormitorio.png");
-            mazmorraTexture = new Texture("backgrounds\\mazmorra.png");
-            vestibuloTexture = new Texture("backgrounds\\vestibulo.png");
+            Texture BckG = BackgroundTextures.First().Value;
 
             backgroundSprite = new Sprite();
-            backgroundSprite.Texture = armeriaTexture;
+            backgroundSprite.Texture = BckG;
             backgroundSprite.Position = new Vector2f(0, 0);
-
-            // Music initialization
-
-            animadaMusic = new Music("musics\\animada.wav");
-            normalMusic = new Music("musics\\normal.wav");
-            tensaMusic = new Music("musics\\tensa.wav");
 
             // Dialog initialization
 
@@ -351,25 +352,18 @@ namespace AdventureEngine
 
                     if(command.id == "setBackground")
                     {
-                        if(command.param1 == "armeria") { backgroundSprite.Texture = armeriaTexture; }
-                        else if (command.param1 == "castillo") { backgroundSprite.Texture = castilloTexture; }
-                        else if (command.param1 == "comedor") { backgroundSprite.Texture = comedorTexture; }
-                        else if (command.param1 == "dormitorio") { backgroundSprite.Texture = dormitorioTexture; }
-                        else if (command.param1 == "mazmorra") { backgroundSprite.Texture = mazmorraTexture; }
-                        else if (command.param1 == "vestibulo") { backgroundSprite.Texture = vestibuloTexture; }
-
+                        backgroundSprite.Texture = BackgroundTextures[command.param1];
                         commandIndex++;
                     }
                     else if(command.id == "playMusic")
                     {
-                        normalMusic.Stop();
-                        animadaMusic.Stop();
-                        tensaMusic.Stop();
+                        foreach (KeyValuePair<string, Music> ControlMusic in MusicAudio)
+                        {
+                            ControlMusic.Value.Stop();
+                        }
 
-                        if (command.param1 == "normal") { normalMusic.Loop = true; normalMusic.Play(); }
-                        else if (command.param1 == "animada") { animadaMusic.Loop = true; animadaMusic.Play(); }
-                        else if (command.param1 == "tensa") { tensaMusic.Loop = true; tensaMusic.Play(); }
-
+                        MusicAudio[command.param1].Loop = true;
+                        MusicAudio[command.param1].Play();
                         commandIndex++;
                     }
                     else if(command.id == "stopMusic")

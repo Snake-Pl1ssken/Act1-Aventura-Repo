@@ -194,10 +194,6 @@ namespace AdventureEngine
 
             Dictionary<string, Music> MusicAudio = new Dictionary<string, Music>();
 
-            //CharacterTextures["Characters"] = new Texture("characters\\basilio.png");
-            //CharacterTextures["Background"] = new Texture("characters\\carmelo.png");  REALMENTE LA GRACIA ES QUE CON EL NOMBRE DEL ARCHIVO SE CREE EL DICCIONARIO
-            //CharacterTextures["Musics"] = new Texture("characters\\dorotea.png");
-
             //DICCIONARIO FIN
             //*********************************************************************************************************************************************************************
 
@@ -236,12 +232,6 @@ namespace AdventureEngine
 
                 CharacterTextures[Character[0]] = new Texture(ficheros[i]);
 
-                //CharacterTextures.Add(nombre, new Texture(ficheros[i])); alternativa para añadir cosas al diccionario
-                //characterSprite = new Sprite();
-                //characterSprite.Texture = CharacterTextures[nombre];
-                //characterSprite.Origin = new Vector2f(CharacterTextures[nombre].Size.X / 2, CharacterTextures[nombre].Size.Y);
-                //characterSprite.Position = new Vector2f(characterX, characterY);
-                //Console.WriteLine("    " + nombre); //TEST
             }
             for (int i = 0; i < ficherosBG.Length; i++)
             {
@@ -271,11 +261,8 @@ namespace AdventureEngine
                 MusicAudio[Music[0]] = new Music(ficherosMS[i]);
             }
 
-
             //SALLIDA RUTAS
             //*********************************************************************************************************************************************************************
-
-
 
 
             // Window initialization
@@ -285,45 +272,17 @@ namespace AdventureEngine
             window.KeyPressed += OnKeyPressed;
             window.MouseButtonPressed += OnMousePressed;
 
-
-            // Characters initialization
-            // a dicionario
-            //basilioTexture = new Texture("characters\\basilio.png");
-            //carmeloTexture = new Texture("characters\\carmelo.png");
-            //doroteaTexture = new Texture("characters\\dorotea.png");
-            //nicolasTexture = new Texture("characters\\nicolas.png");
-
             Texture CHt = CharacterTextures.First().Value;
             characterSprite = new Sprite();
             characterSprite.Texture = CHt;
             characterSprite.Origin = new Vector2f(CHt.Size.X / 2, CHt.Size.Y);
             characterSprite.Position = new Vector2f(characterX, characterY);
 
-
-            // Background initialization
-
-            //armeriaTexture = new Texture("backgrounds\\armeria.png");
-            //castilloTexture = new Texture("backgrounds\\castillo.png");
-            //comedorTexture = new Texture("backgrounds\\comedor.png");
-            //dormitorioTexture = new Texture("backgrounds\\dormitorio.png");
-            //mazmorraTexture = new Texture("backgrounds\\mazmorra.png");
-            //vestibuloTexture = new Texture("backgrounds\\vestibulo.png");
-
             Texture BckG = BackgroundTextures.First().Value;
 
             backgroundSprite = new Sprite();
             backgroundSprite.Texture = BckG;
             backgroundSprite.Position = new Vector2f(0, 0);
-
-            // Music initialization
-
-            //animadaMusic = new Music("musics\\animada.wav");
-            //normalMusic = new Music("musics\\normal.wav");
-            //tensaMusic = new Music("musics\\tensa.wav");
-
-   
-
-
 
             // Dialog initialization
 
@@ -390,13 +349,6 @@ namespace AdventureEngine
                     }
                     else if(command.id == CommandId.playMusic)
                     {
-                        //normalMusic.Stop();
-                        //animadaMusic.Stop();
-                        //tensaMusic.Stop();
-
-                        //if (command.param1 == "normal") { normalMusic.Loop = true; normalMusic.Play(); }
-                        //else if (command.param1 == "animada") { animadaMusic.Loop = true; animadaMusic.Play(); }
-                        //else if (command.param1 == "tensa") { tensaMusic.Loop = true; tensaMusic.Play(); }
 
                         foreach(KeyValuePair<string, Music> ControlMusic in MusicAudio)
                         {
@@ -448,7 +400,6 @@ namespace AdventureEngine
                     window.Draw(dialogContentText);
                 }
 
-                 // Finally, display the rendered frame on screen
                 window.Display();
 
                 continuePressed = false;
