@@ -2,3 +2,15 @@ setBackground|castillo
 playMusic|normal
 wait|1.0
 showDialog|nicolas|Buenos días
+showDialog|nicolas|Soy Nicolás, el mayordomo de la señora Dorotea
+showDialog|nicolas|Permítame llevar su equipaje
+wait|1.0
+showDialog|nicolas|Éste es el vestíbulo del castillo
+showDialog|nicolas|Espere aquí. La señora Dorotea vendrá en cualquier momento
+showDialog|nicolas|Si me disculpa, llevaré su equipaje a su dormitorio
+wait|3.0
+playMusic|tensa
+showDialog|basilio|¿Quién es usted?
+showDialog|basilio|Bueno, en realidad me da igual
+showDialog|basilio|Vaya a buscar a ese inútil de Nicolás porque tenemos un problema
+showDialog|basilio|LA SEÑORA DOROTEA HA DESAPARECIDO

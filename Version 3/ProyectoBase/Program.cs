@@ -6,18 +6,9 @@ using System.Text;
 
 namespace AdventureEngine
 {
-    internal enum CommandId
-    {
-        showDialog,
-        setBackground,
-        playMusic,
-        stopMusic,
-        wait
-    }
-
     internal struct Command
     {
-        public CommandId id;
+        public string id;
         public string param1;
         public string param2;
         public string param3;
@@ -122,6 +113,8 @@ namespace AdventureEngine
             new Command() { id = CommandId.showDialog, param1 = "basilio", param2 = "LA SEÑORA DOROTEA HA DESAPARECIDO" }
 
         };
+
+        //parsear con single .parse
 
         static void Main()
         {
@@ -422,7 +415,7 @@ namespace AdventureEngine
 
             //Abrimos el fichero fileName con un lector de texto
 
-            //bucle de ler comandos del fichero
+            //bucle de leer comandos del fichero
 
                 // leemos linea
 
