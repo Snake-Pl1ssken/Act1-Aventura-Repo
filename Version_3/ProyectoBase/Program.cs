@@ -442,42 +442,42 @@ namespace AdventureEngine
                     Command command = new Command();
 
 
-                    command.id = commandParts[0];
-                    command.param1 = commandParts[1];
-                    command.param2 = commandParts[2];
-                    command.param3 = commandParts[3];
-                    command.param4 = commandParts[4];
-                    command.param5 = commandParts[5];
-                    command.param6 = commandParts[6];
+                    //command.id = commandParts[0];
+                    //command.param1 = commandParts[1];
+                    //command.param2 = commandParts[2];
+                    //command.param3 = commandParts[3];
+                    //command.param4 = commandParts[4];
+                    //command.param5 = commandParts[5];
+                    //command.param6 = commandParts[6];
 
-                    //if (commandParts.Length >= 2)
-                    //{
-                    //    command.id = commandParts[0];
-                    //    command.param1 = commandParts[1];
-                    //    if (commandParts.Length > 2)
-                    //    {
-                    //        command.param2 = commandParts[2];
-                    //    }
-                    //    else if (commandParts.Length > 3)
-                    //    {
-                    //        command.param3 = commandParts[3];
+                    if (commandParts.Length >= 2)
+                    {
+                        command.id = commandParts[0];
+                        command.param1 = commandParts[1];
+                        if (commandParts.Length > 2)
+                        {
+                            command.param2 = commandParts[2];
+                        }
+                        //else if (commandParts.Length > 3)
+                        //{
+                        //    command.param3 = commandParts[3];
 
-                    //    }
-                    //    else if (commandParts.Length > 4)
-                    //    {
-                    //        command.param4 = commandParts[4];
+                        //}
+                        //else if (commandParts.Length > 4)
+                        //{
+                        //    command.param4 = commandParts[4];
 
-                    //    }
-                    //    else if (commandParts.Length > 5)
-                    //    {
-                    //        command.param5 = commandParts[5];
+                        //}
+                        //else if (commandParts.Length > 5)
+                        //{
+                        //    command.param5 = commandParts[5];
 
-                    //    }
-                    //    else if (commandParts.Length > 6)
-                    //    {
-                    //        command.param6 = commandParts[6];
-                    //    }
-                    //}
+                        //}
+                        //else if (commandParts.Length > 6)
+                        //{
+                        //    command.param6 = commandParts[6];
+                        //}
+                    }
 
                     //Lo añadimos a la lista
 

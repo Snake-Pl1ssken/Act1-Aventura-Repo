@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AdventureEngine")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f96b43919828f29f10dd500a74f3e0788e679f86")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07f1f0eeb7ff5c3942cc414b3898d4499de5aad4")]
 [assembly: System.Reflection.AssemblyProductAttribute("AdventureEngine")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AdventureEngine")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

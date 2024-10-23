@@ -5,6 +5,8 @@ showDialog|nicolas|Buenos días
 showDialog|nicolas|Soy Nicolás, el mayordomo de la señora Dorotea
 showDialog|nicolas|Permítame llevar su equipaje
 wait|1.0
+setBackground|vestibulo
+wait|1.0
 showDialog|nicolas|Éste es el vestíbulo del castillo
 showDialog|nicolas|Espere aquí. La señora Dorotea vendrá en cualquier momento
 showDialog|nicolas|Si me disculpa, llevaré su equipaje a su dormitorio
