@@ -11,10 +11,10 @@ namespace AdventureEngine
         public string id;
         public string param1;
         public string param2;
-        public string param3;
-        public string param4;
-        public string param5;
-        public string param6;
+        //public string param3;
+        //public string param4; //Para extra se necesita hasta el 4 por que en total son 4 parametros
+        //public string param5;
+        //public string param6;
     }
 
     internal static class Program
