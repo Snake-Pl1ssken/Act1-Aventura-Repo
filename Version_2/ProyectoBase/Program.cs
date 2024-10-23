@@ -205,32 +205,28 @@ namespace AdventureEngine
 
             rutaOriginal = Directory.GetCurrentDirectory();
 
-            Characters = Directory.GetCurrentDirectory() + "\\characters";
+            Characters = rutaOriginal + "\\characters";
 
-            Backgrounds = Directory.GetCurrentDirectory() + "\\backgrounds";
+            Backgrounds = rutaOriginal + "\\backgrounds";
 
-            Musics = Directory.GetCurrentDirectory() + "\\musics";
+            Musics = rutaOriginal + "\\musics";
 
-            string[] ficheros;
-            string[] ficherosBG;
-            string[] ficherosMS;
+            string[] ficherosCH = Directory.GetFiles(Characters); 
+            string[] ficherosBG = Directory.GetFiles(Backgrounds); 
+            string[] ficherosMS = Directory.GetFiles(Musics);
 
-            ficheros = Directory.GetFiles(Characters);
-            ficherosBG = Directory.GetFiles(Backgrounds);
-            ficherosMS = Directory.GetFiles(Musics);
-
-            for (int i = 0; i < ficheros.Length; i++)
+            for (int i = 0; i < ficherosCH.Length; i++)
             {
                 int posicion;
                 string nombre;
 
-                posicion = ficheros[i].LastIndexOf('\\');
+                posicion = ficherosCH[i].LastIndexOf('\\');
 
-                nombre = ficheros[i].Substring(posicion + 1);
+                nombre = ficherosCH[i].Substring(posicion + 1);
 
                 string[] Character = nombre.Split('.');
 
-                CharacterTextures[Character[0]] = new Texture(ficheros[i]);
+                CharacterTextures[Character[0]] = new Texture(ficherosCH[i]);
 
             }
             for (int i = 0; i < ficherosBG.Length; i++)

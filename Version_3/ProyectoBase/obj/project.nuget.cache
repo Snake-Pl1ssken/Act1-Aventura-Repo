@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "6fbQLti8zgicJffkkyuun47VbW+J8XrNa9lfFJtspUNmuRtKYwaYwfJ8VkvRcnyRiHlWszAXPsgIgo7gjClcwg==",
+  "dgSpecHash": "QdeBk9/2MqI=",
   "success": true,
-  "projectFilePath": "D:\\Jorge Luis Garcia Orbegoso\\Acceso Datos\\Repo_Act1\\Version_3\\ProyectoBase\\AdventureEngine.csproj",
+  "projectFilePath": "C:\\Users\\Plissken\\Desktop\\Jorge Luis\\Grado Superior\\DAM VDJGO 02\\Acceso Datos\\UF1\\Act1-Aventura-Repo\\Version_3\\ProyectoBase\\AdventureEngine.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Alumno\\.nuget\\packages\\csfml\\2.6.1\\csfml.2.6.1.nupkg.sha512",
-    "C:\\Users\\Alumno\\.nuget\\packages\\sfml.audio\\2.6.0\\sfml.audio.2.6.0.nupkg.sha512",
-    "C:\\Users\\Alumno\\.nuget\\packages\\sfml.graphics\\2.6.0\\sfml.graphics.2.6.0.nupkg.sha512",
-    "C:\\Users\\Alumno\\.nuget\\packages\\sfml.net\\2.6.0\\sfml.net.2.6.0.nupkg.sha512",
-    "C:\\Users\\Alumno\\.nuget\\packages\\sfml.system\\2.6.0\\sfml.system.2.6.0.nupkg.sha512",
-    "C:\\Users\\Alumno\\.nuget\\packages\\sfml.window\\2.6.0\\sfml.window.2.6.0.nupkg.sha512"
+    "C:\\Users\\Plissken\\.nuget\\packages\\csfml\\2.6.1\\csfml.2.6.1.nupkg.sha512",
+    "C:\\Users\\Plissken\\.nuget\\packages\\sfml.audio\\2.6.0\\sfml.audio.2.6.0.nupkg.sha512",
+    "C:\\Users\\Plissken\\.nuget\\packages\\sfml.graphics\\2.6.0\\sfml.graphics.2.6.0.nupkg.sha512",
+    "C:\\Users\\Plissken\\.nuget\\packages\\sfml.net\\2.6.0\\sfml.net.2.6.0.nupkg.sha512",
+    "C:\\Users\\Plissken\\.nuget\\packages\\sfml.system\\2.6.0\\sfml.system.2.6.0.nupkg.sha512",
+    "C:\\Users\\Plissken\\.nuget\\packages\\sfml.window\\2.6.0\\sfml.window.2.6.0.nupkg.sha512"
   ],
   "logs": []
 }

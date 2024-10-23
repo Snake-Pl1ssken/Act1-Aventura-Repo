@@ -1075,24 +1075,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alumno\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Plissken\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Jorge Luis Garcia Orbegoso\\Acceso Datos\\Repo_Act1\\Version_3\\ProyectoBase\\AdventureEngine.csproj",
+      "projectUniqueName": "C:\\Users\\Plissken\\Desktop\\Jorge Luis\\Grado Superior\\DAM VDJGO 02\\Acceso Datos\\UF1\\Act1-Aventura-Repo\\Version_3\\ProyectoBase\\AdventureEngine.csproj",
       "projectName": "AdventureEngine",
-      "projectPath": "D:\\Jorge Luis Garcia Orbegoso\\Acceso Datos\\Repo_Act1\\Version_3\\ProyectoBase\\AdventureEngine.csproj",
-      "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
-      "outputPath": "D:\\Jorge Luis Garcia Orbegoso\\Acceso Datos\\Repo_Act1\\Version_3\\ProyectoBase\\obj\\",
+      "projectPath": "C:\\Users\\Plissken\\Desktop\\Jorge Luis\\Grado Superior\\DAM VDJGO 02\\Acceso Datos\\UF1\\Act1-Aventura-Repo\\Version_3\\ProyectoBase\\AdventureEngine.csproj",
+      "packagesPath": "C:\\Users\\Plissken\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Plissken\\Desktop\\Jorge Luis\\Grado Superior\\DAM VDJGO 02\\Acceso Datos\\UF1\\Act1-Aventura-Repo\\Version_3\\ProyectoBase\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Plissken\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1144,7 +1139,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
